@@ -41,7 +41,6 @@ function sayHi() {
 sayHi();
 ```
 
-img here
 
 ![](./img/image-name.jpg)
 
