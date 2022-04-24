@@ -1,10 +1,51 @@
 1. Create a function by your choice that accepts a callback function.
 
+function hello(name){
+  return "Hey, " + name
+}
+
+function printOutHello(cb) {
+  return "Bye"
+}
+
+function a() {
+  alert("A!");
+
+  function b() {
+    alert("B!");
+  }
+
+  return b();
+}
+
+var s = a();
+alert("break");
+s();
+
+hello ()
 2. Create a function by you choice that returns a function reference.
+
+function a() {
+  alert("A!");
+
+  function b() {
+    alert("B!");
+  }
+
+  return b;
+}
+
+var s = a();
+alert("break");
+s();
 
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
    - A 'callback' function - a function that is applied to each element of the array (inside of the function 'map')
+
+  function map (arr, cb) {
+
+  }
 
 Have `map` return a new array filled with values that are the result of the 'callback' function on each element of the input array.
 
