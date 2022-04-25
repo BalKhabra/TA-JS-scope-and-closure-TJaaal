@@ -21,10 +21,10 @@ function getCounter() {
 
 let counter = getCounter()
 
-counter.value();  // output
+counter.value();  // o
 counter.increment(); // output
 counter.increment(); // output
-counter.value(); // output
+counter.value(); // 0
 counter.decrement(); // output
 counter.value(); // output
 ```
