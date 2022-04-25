@@ -28,7 +28,7 @@ function getCounter() {
 
 let counter = getCounter();
 
-counter(); // output
+counter(); // 0
 counter(); // output
 counter(); // output
 counter(); // output
