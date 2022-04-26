@@ -56,11 +56,11 @@ console.log(one, two);
 
 ```js
 console.log(addOne(0));
-fucntion addOne(num){
+function addOne(num){
   return num + 1;
 }
-var two = addOne(1);
-console.log(two);
+var two = addOne(1); // 1
+console.log(two); // 2
 ```
 
 6. Make a Execution Context Diagram for the following JS and write the output.
@@ -95,7 +95,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // undefined
 ```
 
 9. What will be the output of the following
@@ -108,7 +108,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // true
 ```
 
 10. What will be the output of the following
@@ -121,7 +121,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // undefined
 ```
 
 11. What will be the output of the following
@@ -134,8 +134,8 @@ var knownAs = 'no one';
 function fullName(a, b) {
   return a + b;
 }
-const name = fullName(firstName, lastName);
-console.log(name);
+const name = fullName(firstName, lastName); 
+console.log(name); // Arya Stark
 ```
 
 12. Guess the output of the code below with a reason.
@@ -146,7 +146,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log(name);
+console.log(name); // Arya Stark
 ```
 
 13. Guess the output of the code below with a reason.
@@ -155,7 +155,7 @@ console.log(name);
 if (true) {
   var name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); // name already decalred by var
 ```
 
 14. Guess the output of the code below with a reason.
@@ -164,7 +164,7 @@ console.log(name);
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); // Arya Stark
 ```
 
 15. Guess the output of the code below with a reason.
@@ -173,7 +173,7 @@ console.log(name);
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); // 20
 ```
 
 16. Guess the output of the code below with a reason.
@@ -182,7 +182,7 @@ console.log(i);
 for (let i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); // i is not defined
 ```
 
 17. Guess the output and the reason behind that.
@@ -194,7 +194,7 @@ function sample() {
   }
   console.log(username);
 }
-sample();
+sample(); // John Snow
 ```
 
 18. Guess the output and the reason behind that.
@@ -206,7 +206,7 @@ function sample() {
   }
   console.log(username);
 }
-sample();
+sample(); // username not defined
 ```
 
 19. Guess the output and the reason behind that.
@@ -216,11 +216,11 @@ function sample() {
   var username = 'Arya Stark';
   if (true) {
     var username = 'John Snow';
-    console.log(username);
+    console.log(username); // john snow
   }
-  console.log(username, 'second');
+  console.log(username, 'second'); // john snow second
 }
-sample();
+sample(); // 
 ```
 
 20. Guess the output and the reason behind that.
@@ -230,11 +230,11 @@ function sample() {
   let username = 'Arya Stark';
   if (true) {
     let username = 'John Snow';
-    console.log(username, 'first');
+    console.log(username, 'first'); // john snow first
   }
-  console.log(username, 'second');
+  console.log(username, 'second'); // john snow second
 }
-sample();
+sample(); // 
 ```
 
 21. Guess the output and the reason behind that.
@@ -247,7 +247,7 @@ function sample(...args) {
   }
 }
 
-sample('First', 'Second', 'Third');
+sample('First', 'Second', 'Third'); // hello I am first; hello I am second; hello I am third
 ```
 
 22. Guess the output and the reason behind that.
@@ -260,7 +260,7 @@ function sample(...args) {
   }
 }
 
-sample('First', 'Second', 'Third');
+sample('First', 'Second', 'Third'); // hello I am first; hello I am second; hello I am third
 ```
 
 23. Guess the output and the reason behind that.
@@ -272,7 +272,7 @@ if (true) {
   };
   console.log(username, 'First');
   let username = 'Hello World!';
-  myFunc();
+  myFunc(); // cannot access username before intitialization
 }
 ```
 
@@ -286,10 +286,11 @@ function outer() {
       `I love this movie called ${movie.toUpperCase()}`
     );
   }
-  inner();
+  inner(); // I love this movie called MAD MAX: FURY ROAD
 }
 
-outer();
+outer(); // undefined
+
 ```
 
 25. Guess the output and the reason behind that.
@@ -300,7 +301,7 @@ function outer() {
   function inner() {
     let movie = 'Before Sunrise';
     console.log(
-      `I love this movie called ${movie.toUpperCase()}`
+      `I love this movie called ${movie.toUpperCase()}` // I love this movie called before sunrise
     );
   }
   inner();
@@ -319,7 +320,7 @@ function outer() {
     function extraInner() {
       let movie = 'Gone Girl';
       console.log(
-        `I love this movie called ${movie.toUpperCase()}`
+        `I love this movie called ${movie.toUpperCase()}` //  `I love this movie called Gone Girl
       );
     }
     extraInner();
