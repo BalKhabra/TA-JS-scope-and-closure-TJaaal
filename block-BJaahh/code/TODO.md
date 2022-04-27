@@ -3,8 +3,9 @@
 1. Write a function called `multiplyBy` that takes a `number` as an argument and returns a function. Returned function takes another `number` as an argument and returns the multiplication of both the numbers.
 
 ```js
-// Your code goes here
-
+function multiplyBy (number){
+  return function a * b
+}
 const double = multiplyBy(2);
 const final = double(15); // final should be 30
 ```
@@ -12,7 +13,11 @@ const final = double(15); // final should be 30
 2. Write a function called `fullName` that takes a string `firstName` as an argument and returns a function. Returned function takes another string `lastName` as an argument and returns full name.
 
 ```js
-// Your code goes here
+function fullName (firstName){
+  return function ()
+
+}
+
 
 const name = fullName('Will');
 const final = name('Smith'); // final should be "Will Smith"
@@ -22,7 +27,7 @@ const final = name('Smith'); // final should be "Will Smith"
 
 ```js
 function isInBetween(a, b) {
-  // your code goes here
+  return functon ()
 }
 
 const isChild = isInBetween(10, 100);
