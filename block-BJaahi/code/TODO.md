@@ -5,7 +5,7 @@ For the given code below:
 For Example:
 
 1.
-
+                                                                                   
 ```js
 var username = 'Arya';
 let brothers = ['John', 'Ryan', 'Bran'];
@@ -63,9 +63,29 @@ var nextMessage = sayHello('Test');
 
 <!-- Answer -->
 
+<!-- //declaration phase -->
 ```js
-// Your code goes here
+var username = undefined;
+let number;
+
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+
+let message;
+var nextMessage = undefined;
+
+//execution phase
+username = 'Arya';
+number = 21;
+
+console.log(username, number);
+
+message = sayHello(username);
+nextMessage = sayHello('Test');
 ```
+
+
 
 3.
 
@@ -85,7 +105,21 @@ var nextMessage = sayHello('Test');
 <!-- Answer -->
 
 ```js
-// Your code goes here
+// declaration phase
+let username;
+let number;
+let sayHello = function (name) {
+  return `Hello ${name}`;
+};
+let message;
+var nextMessage = undefined;
+
+//execution phase
+username= 'Arya';
+number = 21;
+
+message = sayHello(username);
+nextMessage = sayHello('Test');
 ```
 
 4.
@@ -107,7 +141,17 @@ var nextMessage = sayHello('Test');
 <!-- Answer -->
 
 ```js
-// Your code goes here
+// declaration phase
+let username;
+let number;
+
+let sayHello = function (name) {
+  return `Hello ${name}`;
+};
+
+var nextMessage = undefined;
+
+//execution phase
 ```
 
 5.
@@ -122,7 +166,12 @@ let age = 21;
 <!-- Answer -->
 
 ```js
-// Your code goes here
+var name = undefined;
+let age;
+
+//execution phase
+console.log(name);
+console.log(age);
 ```
 
 6.
@@ -141,7 +190,11 @@ sayHi();
 <!-- Answer -->
 
 ```js
-// Your code goes here
+//declaration phase
+function sayHi
+
+//execution phase
+
 ```
 
 7.
