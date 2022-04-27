@@ -3,8 +3,10 @@
 1. Write a function called `multiplyBy` that takes a `number` as an argument and returns a function. Returned function takes another `number` as an argument and returns the multiplication of both the numbers.
 
 ```js
-function multiplyBy (number){
-  return function a * b
+function multiplyBy (num1){
+  return function (num2) {
+    return num1 * num2
+  } 
 }
 const double = multiplyBy(2);
 const final = double(15); // final should be 30
@@ -14,7 +16,9 @@ const final = double(15); // final should be 30
 
 ```js
 function fullName (firstName){
-  return function ()
+  return function ()lastName {
+    return `${firstName} ${lastName}`
+  }
 
 }
 
@@ -27,7 +31,13 @@ const final = name('Smith'); // final should be "Will Smith"
 
 ```js
 function isInBetween(a, b) {
-  return functon ()
+  return functon (c) {
+    if (a > b){
+      return c > b && c < a;
+    } else {
+      return c < b && c > a;
+    }
+  }
 }
 
 const isChild = isInBetween(10, 100);
@@ -40,7 +50,9 @@ isChild(103); // false
 
 ```js
 function letsWishThem(greeting) {
-  // your code goes here
+  return function (message) {
+    return `${greeting}`
+  }
 }
 
 const callWithHey = letsWishThem('Hey');
@@ -52,8 +64,10 @@ callWithHello('How Are You?'); // Hello How Are You?
 5. Write a function called `addGame` which takes a string (name of the game) and the current score. It returns a function calling that will increment the score by one and print something like `Score of Basketball is 1`.
 
 ```js
-function addGame(gameName) {
-  // your code goes here
+function addGame(gameName, currentScore) {
+  return function (score){
+    alert `Score of ${gameName} is ${++currentScore}`
+  }
 }
 
 // Output
@@ -69,7 +83,13 @@ cricket(); // Your score of Cricket is 2
 
 ```js
 function getCard(suit) {
-  // your code goes here
+  return function (){
+    let vallues = [2,3,4,5,6,7,8,9,10,"J", "Q", "K", "A"]
+    function getRandomNumber (){
+      return Math.floor(Math.random()+ values.length)
+    }
+    return `Card is: ${values[getRandomNumber()]} ${suit}`
+  }
 }
 
 // Output
