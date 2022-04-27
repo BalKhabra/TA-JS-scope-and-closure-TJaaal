@@ -2,7 +2,8 @@
 
 ```js
 function once(cb) {
-  // your code goes here
+  return function (){
+  }
 }
 
 // TEST
@@ -18,7 +19,9 @@ log(); // return undefinde (can't be called twice)
 
 ```js
 function once(cb) {
-  // your code goes here
+  return function () {
+    cb();
+  }
 }
 
 // TEST
