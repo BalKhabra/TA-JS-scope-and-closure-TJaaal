@@ -2,7 +2,13 @@
 
 ```js
 function once(cb) {
+  let called = false
   return function (){
+    if(!called) {
+      cb();
+      called = true;
+    }
+    cb();
   }
 }
 
